@@ -1,9 +1,33 @@
+@font-face {
+  font-family: 'neoneonregular';
+  src: url("neoneon-webfont.woff2") format("woff2"), url("neoneon-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.glow {
+  color: #fff;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 10px #ff0b7d, 0 0 20px   #ff0b7d, 0 0 30px  #ff0b7d, 0 0 40px  #ff0b7d, 0 0 50px  #ff0b7d, 0 0 60px  #ff0b7d;
+  }
+}
+
 .home {
   width: 100%;
   height: 100vh;
   background-image: url(https://volganga.com/wordpress/wp-content/gallery/city-streets-hd/city-streets_01.jpg);
   background-position: center top;
   background-size: cover;
+  -webkit-box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.6);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,24 +35,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px;
 }
 
-.h1 {
-  font-size: 5rem;
-  font-weight: bold;
-}
-
-.p {
-  padding-top: 30px;
-  font-size: 3rem;
-}
-
 .headers {
-  font-size: 5em;
-  text-align: center;
-  padding-top: 40vh;
+  font-size: 2em;
+  text-align: right;
+  padding-top: 75vh;
+  padding-right: 40px;
   line-height: 7rem;
-  color: #ff0505;
-  text-shadow: 5px 5px 25px black;
-  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-family: 'neoneonregular';
+  text-shadow: 0px 0px 25px red;
 }
 
 .grid-container {
@@ -37,8 +52,6 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
   margin-left: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -46,15 +59,18 @@ h1, h2, h3, h4, h5, h6 {
   justify-items: center;
   margin-right: 15px;
   overflow-x: hidden;
+  -ms-grid-columns: (minmax(290px, 2fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(290px, 2fr));
+}
+
+.grid-item {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(43, 41, 41, 0.2);
-  color: white;
-  text-align: center;
-  padding-top: 50px;
+  background-size: cover;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=styles.css.map */
