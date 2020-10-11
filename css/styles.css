@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
   text-align: right;
   padding-top: 75vh;
-  padding-right: 40px;
+  padding-right: 20px;
   line-height: 7rem;
   color: white;
   font-family: 'neoneonregular';
@@ -51,16 +51,15 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5rem;
   display: -ms-grid;
   display: grid;
-  grid-gap: 20px;
-  margin-left: 15px;
+  grid-gap: 10px;
+  margin-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  margin-right: 15px;
-  overflow-x: hidden;
-  -ms-grid-columns: (minmax(290px, 2fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(290px, 2fr));
+  margin-right: 10px;
+  -ms-grid-columns: (minmax(170px, 2fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(170px, 2fr));
 }
 
 .grid-item {
