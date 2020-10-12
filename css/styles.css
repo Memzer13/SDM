@@ -1,8 +1,25 @@
 @font-face {
   font-family: 'neoneonregular';
-  src: url("neoneon-webfont.woff2") format("woff2"), url("neoneon-webfont.woff") format("woff");
+  src: url("neoneon-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+.ite-long {
+  width: auto;
+}
+
+img {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(170px, 2fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(170px, 2fr));
 }
 
 .home {
@@ -37,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 5rem;
   display: -ms-grid;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 0px;
   margin-left: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
