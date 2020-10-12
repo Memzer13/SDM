@@ -8,7 +8,7 @@
         <link href="css/nav.min.css" rel="stylesheet">
         <link href="css/styles.css" type="text/css" rel="stylesheet">    
         <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-        </head>
+    </head>
     <body>
         <!-- NAVIGATION SECTION-->
         <nav class="nav">
@@ -32,9 +32,21 @@
             </div>
         </nav>
         <!--  GRID SECTION -->
-
             <div class="item">
                 <img src="img/foto8.jpg" alt="pic8">
             </div>
     </body>
+        <!--SCRIPT SECTION -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 50) {
+                    $('.nav').addClass('affix');
+                    console.log("OK");
+                    } else {
+                    $('.nav').removeClass('affix');
+                }
+            });
+        </script>
 </html>
